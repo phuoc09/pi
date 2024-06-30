@@ -1,0 +1,60 @@
+  2878.7ms (setup:755): 2024-06-30 12:36:08
+  2880.2ms (setup:756): /usr/bin/pipx install picamera
+  2881.4ms (setup:757): pipx version is 1.1.0
+  2882.5ms (setup:758): Default python interpreter is '/usr/bin/python3'
+  2883.9ms (mkdir:81): creating directory /home/nogui/.local/pipx/venvs
+  2886.0ms (mkdir:81): creating directory /home/nogui/.local/bin
+  2888.2ms (mkdir:81): creating directory /home/nogui/.local/pipx/.cache
+  2890.8ms (setup:766): Adding CACHEDIR.TAG to cache directory
+  2911.5ms (package_name_from_spec:323): Determined package name: picamera
+  2912.5ms (package_name_from_spec:324): Package name determined in 0.0s
+  2920.6ms (run_subprocess:173): running /usr/bin/python3 -m venv --without-pip /home/nogui/.local/pipx/venvs/picamera
+  3908.1ms (run_subprocess:186): stdout:
+  3909.3ms (run_subprocess:188): stderr:
+  3910.1ms (run_subprocess:189): returncode: 0
+  3919.9ms (run_subprocess:173): running /usr/bin/python3 -m venv --clear /home/nogui/.local/pipx/shared
+ 93019.9ms (run_subprocess:186): stdout:
+ 93021.0ms (run_subprocess:188): stderr:
+ 93021.9ms (run_subprocess:189): returncode: 0
+ 93024.8ms (upgrade:91): Upgrading shared libraries in /home/nogui/.local/pipx/shared
+ 93031.1ms (run_subprocess:173): running /home/nogui/.local/pipx/shared/bin/python -m pip --disable-pip-version-check install --force-reinstall -q --upgrade pip setuptools wheel
+197850.9ms (run_subprocess:186): stdout:
+197852.0ms (run_subprocess:188): stderr:   WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))': /simple/pip/pip-24.1.1-py3-none-any.whl
+197852.9ms (run_subprocess:189): returncode: 0
+197857.5ms (run_subprocess:173): running /home/nogui/.local/pipx/venvs/picamera/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+198133.3ms (run_subprocess:186): stdout: /home/nogui/.local/pipx/venvs/picamera/lib/python3.11/site-packages
+198134.4ms (run_subprocess:189): returncode: 0
+198137.3ms (run_subprocess:173): running /home/nogui/.local/pipx/shared/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+198403.5ms (run_subprocess:186): stdout: /home/nogui/.local/pipx/shared/lib/python3.11/site-packages
+198404.6ms (run_subprocess:189): returncode: 0
+198408.7ms (run_subprocess:173): running /home/nogui/.local/pipx/venvs/picamera/bin/python --version
+198425.9ms (run_subprocess:186): stdout: Python 3.11.2
+198426.9ms (run_subprocess:188): stderr:
+198427.8ms (run_subprocess:189): returncode: 0
+198432.0ms (_parsed_package_to_package_or_url:128): cleaned package spec: picamera
+198437.6ms (run_subprocess:173): running /home/nogui/.local/pipx/venvs/picamera/bin/python -m pip install picamera
+213972.1ms (run_subprocess:189): returncode: 0
+213982.0ms (run_subprocess:173): running <fetch_info_in_venv commands>
+214469.9ms (run_subprocess:186): stdout: {"sys_path": ["/usr/lib/python311.zip", "/usr/lib/python3.11", "/usr/lib/python3.11/lib-dynload", "/home/nogui/.local/pipx/venvs/picamera/lib/python3.11/site-packages", "/home/nogui/.local/pipx/shared/lib/python3.11/site-packages"], "python_version": "3.11.2", "environment": {"implementation_name": "cpython", "implementation_version": "3.11.2", "os_name": "posix", "platform_machine": "armv6l", "platform_release": "6.6.20+rpt-rpi-v6", "platform_system": "Linux", "platform_version": "#1 Raspbian 1:6.6.20-1+rpt1 (2024-03-07)", "python_full_version": "3.11.2", "platform_python_implementation": "CPython", "python_version": "3.11", "sys_platform": "linux"}}
+214471.0ms (run_subprocess:189): returncode: 0
+214542.9ms (get_venv_metadata_for_package:303): get_venv_metadata_for_package: 565ms
+214545.2ms (_parsed_package_to_package_or_url:128): cleaned package spec: picamera
+214549.5ms (rmdir:55): removing directory /home/nogui/.local/pipx/venvs/picamera
+214590.9ms (cli:822): PipxError: No apps associated with package picamera or its dependencies. If you are
+attempting to install a library, pipx should not be used. Consider using
+pip or a similar tool instead.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 819, in cli
+    return run_pipx_command(parsed_pipx_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pipx/main.py", line 202, in run_pipx_command
+    return commands.install(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pipx/commands/install.py", line 69, in install
+    run_post_install_actions(
+  File "/usr/lib/python3/dist-packages/pipx/commands/common.py", line 358, in run_post_install_actions
+    raise PipxError(
+pipx.util.PipxError: No apps associated with package picamera or its dependencies. If you are
+attempting to install a library, pipx should not be used. Consider using
+pip or a similar tool instead.
+214613.5ms (cli:830): pipx finished.
